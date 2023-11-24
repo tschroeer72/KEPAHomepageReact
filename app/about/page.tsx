@@ -2,17 +2,12 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-import Demo from '@/components/Demo';
-
 export const metadata = {
-  title: 'App',
-  description: 'App',
+  title: 'Über die App',
+  description: 'Eine kurze Beschreibung der App.',
 };
 
-/**
- * Startseite.
- */
-export default function HomePage() {
+export default function Page() {
   return (
     <Box
       sx={{
@@ -28,14 +23,12 @@ export default function HomePage() {
           color="text.primary"
           gutterBottom
         >
-          App-Vorlage
+          App
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" paragraph>
-          Eine einfache Start Vorlage für NEXT.js 14 App-Router und MUI.
+          About.
         </Typography>
-
-          <Demo />
-        
+       
       </Container>
     </Box>
   );

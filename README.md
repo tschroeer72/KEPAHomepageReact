@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEXT / MUI Start Vorlage
+
+Eine Start Vorlage für NEXT 14 (app-Router) mit Material UI (MUI) in welcher schon veschiedene Features eingebaut sind.
+
+## Features
+
+Die Vorlage bietet folgende Features:
+
+* NEXT.js 14 App-Router
+* MUI Theme
+* Responsive Desing Navigation
+* Dark/Light Theme Umschalter
+* Einfach zu verwendende Benachrichtigunsleiste
 
 ## Getting Started
 
-First, run the development server:
+Installation und laufen lassen:
 
 ```bash
+npm i
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Die Anwendung läuft dann lokal unter [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Anleitung
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Die Features der Vorlage können auf der Startseite ausprobiert werden. Der Code dazu findet ihr in der Demo-Komponente (components\Demo.tsx), dort wird auch die Verwendung dieser gezeigt.
 
-## Learn More
+## Erste Schritte
 
-To learn more about Next.js, take a look at the following resources:
+Um aus der Vorlage euere eigene Anwendung zu machen solltet ihr folgende Schritte unternehmen:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Name in package.json anpassen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Theme
 
-## Deploy on Vercel
+Das MUI-Theme kann in components\theme\theme.ts angepasst werden. Dort wird zwischen dem Dark- und dem Light-Theme unterschieden, beide können unabhängig voneinander individualisiert werden. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Zum einfachen Anpassen des Theme kann der [MUI-Theme-Creator](https://zenoo.github.io/mui-theme-creator/) verwendet werden.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### App Bar
+
+Die AppBar bzw. der Drawer können in components\AppBar.tsx angepasst werden. Dort können die Links für die Menüeinträge in der Konstanten "items" definiert werden. 
+Diese Einträge werden dann in die AppBar und in den Drawer (sichtbar in Mobilen Anwendung) eingefügt.
