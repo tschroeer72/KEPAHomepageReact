@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 export const metadata = {
-  title: 'Über die App',
+  title: 'Aktuelles',
   description: 'Eine kurze Beschreibung der App.',
 };
 
@@ -23,10 +23,10 @@ export default function Page() {
           color="text.primary"
           gutterBottom
         >
-            Über
+            Kontakt
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" paragraph>
-          About.
+          cccc
         </Typography>
        
       </Container>

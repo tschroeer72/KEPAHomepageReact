@@ -32,14 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Footer */}
           <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-            <Typography
-              variant="subtitle1"
-              align="center"
-              color="text.secondary"
-              component="p"
-            >
-              Footer
-            </Typography>
+            <Typography variant="subtitle1" align="center" color="text.secondary"  component="p"></Typography>
             <Copyright />
           </Box>
 
@@ -52,10 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © ' + new Date().getFullYear() + ' dimader - '}
-      <Link color="inherit" href="https://github.com/dimader">
+      {'Copyright © ' + new Date().getFullYear() + ' Thorsten Schröer - '}
+      {/*<Link color="inherit" href="https://github.com/dimader">
         Source Code auf GitHub
-      </Link>{' '}
+      </Link>{' '}*/}
     </Typography>
   );
 };

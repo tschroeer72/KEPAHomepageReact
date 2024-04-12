@@ -16,15 +16,21 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import useThemeSwitcher from '@/components/theme/useThemeSwitcher';
 
 // Breite des Drawers in der Mobilen Ansicht.
 const drawerWidth = 240;
 
-const appName = "App";
+const appName = "Kegelgruppe KEPA 1958";
 
 /** Einträge für die Hauptnavigation. */
 const items = [
     {link: "/", name: "Home"},
+    {link: "/aktuelles", name: "Aktuelles"},
+    {link: "/termine", name: "Termine"},
+    {link: "/kontakt", name: "Kontakt"},
     {link: "/about", name: "About"},
 ];
 
@@ -34,6 +40,8 @@ const items = [
  * Bei Anpassungen sollten beide berücksichtigt werden.
  */
 export default function DrawerAppBar() {
+
+    const themeService = useThemeSwitcher();
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -87,6 +95,9 @@ export default function DrawerAppBar() {
                             </Button>
                         ))}
                     </Box>
+                    <IconButton sx={{ ml: 1 }} onClick={() => themeService.toggleTheme()} color="inherit">
+                        {themeService.getCurrentThemeName() === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <nav>

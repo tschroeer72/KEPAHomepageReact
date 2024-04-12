@@ -12,7 +12,7 @@ export default function ThemeRegistry({ children }: { children: React.ReactNode 
 
   const service = useThemeSwitcher();
 
-  const theme = service.getCurrentThemeName() === 'light' ? 
+  const theme = service.getCurrentThemeName() === 'dark' ?
     lightTheme : darkTheme;
 
   return (
