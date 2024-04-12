@@ -25,13 +25,15 @@ export default function HomePage() {
         pb: 6,
       }}
     >
-      <Container maxWidth="lm">
+      <Container maxWidth="md">
           <Stack spacing={2} justifyContent="center" alignItems="center">
             {/*<Startseite />*/}
               <Typography variant="h3" align="center" color="text.secondary" paragraph>
                   Herzlich Willkommen bei KEPA
               </Typography>
-            <Image src={pokal} alt="Pokal" height={300} />
+            <div style={{height: '60vh' }}>
+                <Image src={pokal} alt="Pokal" style={{ width: '100%', height: '100%' }} />
+            </div>
           </Stack>
       </Container>
     </Box>
