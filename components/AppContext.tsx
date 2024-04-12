@@ -1,8 +1,8 @@
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from "@mui/material/CssBaseline";
 
-import NotificationProvider from '@/components/notifications/NotificationProvider';
-import ThemeRegistry from '@/components/theme/ThemeRegistry';
-import ThemeSwitchProvider from '@/components/theme/ThemeSwitcherContext';
+import NotificationProvider from "@/components/notifications/NotificationProvider";
+import ThemeRegistry from "@/components/theme/ThemeRegistry";
+import ThemeSwitchProvider from "@/components/theme/ThemeSwitcherContext";
 
 /**
  * Gerüst der Anwendung.
@@ -13,14 +13,10 @@ function App({ children }: { children: React.ReactNode }) {
     <ThemeSwitchProvider>
       <ThemeRegistry>
         <CssBaseline />
-        <NotificationProvider>
-
-          {children}
-
-        </NotificationProvider>
+        <NotificationProvider>{children}</NotificationProvider>
       </ThemeRegistry>
     </ThemeSwitchProvider>
   );
-};
+}
 
 export default App;

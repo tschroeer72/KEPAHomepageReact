@@ -1,29 +1,22 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function Error({
-    error,
-    reset,
+  error,
+  reset,
 }: {
-    error: Error & { digest?: string }
-    reset: () => void
+  error: Error & { digest?: string };
+  reset: () => void;
 }) {
+  useEffect(() => {
+    console.error("Ein Fehler wurde geworfen: " + error);
+  }, [error]);
 
-    useEffect(() => {
-        console.error("Ein Fehler wurde geworfen: " + error);
-    }, [error]);
-
-    return (
-        <div>
-            <h2>Etwas ist schiefgelaufen.</h2>
-            <button
-                onClick={
-                    () => reset()
-                }
-            >
-                Nocheinmal versuchen
-            </button>
-        </div>
-    )
-};
+  return (
+    <div>
+      <h2>Etwas ist schiefgelaufen.</h2>
+      <button onClick={() => reset()}>Nocheinmal versuchen</button>
+    </div>
+  );
+}
