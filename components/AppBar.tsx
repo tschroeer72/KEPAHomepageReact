@@ -31,6 +31,7 @@ const items = [
     {link: "/aktuelles", name: "Aktuelles"},
     {link: "/termine", name: "Termine"},
     {link: "/kontakt", name: "Kontakt"},
+    {link: "/kegelverwaltung", name: "Kegelverwaltung"},
     {link: "/about", name: "About"},
 ];
 

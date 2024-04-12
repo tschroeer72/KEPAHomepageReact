@@ -2,7 +2,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-import Demo from '@/components/Demo';
+// import Demo from '@/components/Demo';
+import Startseite from "@/components/Startseite";
+import pokal from "../images/Vereinspokal.png";
+import Image from "next/image";
+import Stack from "@mui/material/Stack";
 
 export const metadata = {
   title: 'App',
@@ -21,21 +25,14 @@ export default function HomePage() {
         pb: 6,
       }}
     >
-      <Container maxWidth="sm">
-        <Typography
-          variant="h2"
-          align="center"
-          color="text.primary"
-          gutterBottom
-        >
-          App-Vorlage
-        </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" paragraph>
-          Eine einfache Start Vorlage für NEXT.js 14 App-Router und MUI.
-        </Typography>
-
-          <Demo />
-        
+      <Container maxWidth="lm">
+          <Stack spacing={2} justifyContent="center" alignItems="center">
+            {/*<Startseite />*/}
+              <Typography variant="h3" align="center" color="text.secondary" paragraph>
+                  Herzlich Willkommen bei KEPA
+              </Typography>
+            <Image src={pokal} alt="Pokal" height={300} />
+          </Stack>
       </Container>
     </Box>
   );
