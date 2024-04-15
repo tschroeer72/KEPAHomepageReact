@@ -9,8 +9,8 @@ import Image from "next/image";
 import Stack from "@mui/material/Stack";
 
 export const metadata = {
-  title: "App",
-  description: "App",
+  title: "KEPA",
+  description: "KEPA",
 };
 
 /**
