@@ -20,6 +20,8 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import useThemeSwitcher from "@/components/theme/useThemeSwitcher";
 
+import "./theme/App.css";
+
 // Breite des Drawers in der Mobilen Ansicht.
 const drawerWidth = 240;
 
@@ -27,12 +29,16 @@ const appName = "Kegelgruppe KEPA 1958";
 
 /** Einträge für die Hauptnavigation. */
 const items = [
-  { link: "/", name: "Home" },
-  { link: "/aktuelles", name: "Aktuelles" },
-  { link: "/termine", name: "Termine" },
-  { link: "/kontakt", name: "Kontakt" },
-  { link: "/kegelverwaltung", name: "Kegelverwaltung" },
-  { link: "/about", name: "About" },
+  { link: "/", name: "Home", linktype: "int" },
+  { link: "/aktuelles", name: "Aktuelles", linktype: "int" },
+  { link: "/termine", name: "Termine", linktype: "int" },
+  { link: "/kontakt", name: "Kontakt", linktype: "int" },
+  {
+    link: "https://kegelgruppe-kepa.de/kegelverwaltung",
+    name: "Kegelverwaltung",
+    linktype: "ext",
+  },
+  // { link: "/about", name: "About" },
 ];
 
 /**
@@ -93,16 +99,39 @@ export default function DrawerAppBar() {
             {appName}
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {items.map((item) => (
-              <Button
+            {items.map(
+              (item) =>
+                item.linktype === "int" ? (
+                  <Button
+                    component={Link}
+                    href={item.link}
+                    key={item.name}
+                    sx={{ color: "#fff" }}
+                  >
+                    {item.name}
+                  </Button>
+                ) : (
+                  <Button
+                    // component={Link}
+                    // href={item.link}
+                    key={item.name}
+                    sx={{ color: "#fff" }}
+                  >
+                    <a href={item.link} target="_blank">
+                      {item.name}
+                    </a>
+                  </Button>
+                ),
+
+              /*<Button
                 component={Link}
                 href={item.link}
                 key={item.name}
                 sx={{ color: "#fff" }}
               >
                 {item.name}
-              </Button>
-            ))}
+              </Button>*/
+            )}
           </Box>
           <IconButton
             sx={{ ml: 1 }}
@@ -110,9 +139,9 @@ export default function DrawerAppBar() {
             color="inherit"
           >
             {themeService.getCurrentThemeName() === "dark" ? (
-              <Brightness7Icon />
-            ) : (
               <Brightness4Icon />
+            ) : (
+              <Brightness7Icon />
             )}
           </IconButton>
         </Toolbar>

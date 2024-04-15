@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prod": "next export",
-    "lint": "next lint",
-    "format": "prettier --write \"app/**/*.tsx\" \"components/**/*.tsx\" \"components/**/*.ts\""
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "^11",
