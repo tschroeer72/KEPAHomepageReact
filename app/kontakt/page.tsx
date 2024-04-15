@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Grid, TextField } from "@mui/material";
 import Button from "@mui/material/Button";
-import { useRef } from "react";
+import { useState } from "react";
 
 /*export const metadata = {
   title: "Aktuelles",
@@ -13,9 +13,7 @@ import { useRef } from "react";
 };*/
 
 export default function Page() {
-  // const name = useRef<HTMLDivElement>();
-  // const tel = useRef<HTMLDivElement>();
-  // const mess = useRef<HTMLDivElement>();
+  const [mailData, setMailData] = useState<IMailData>();
 
   return (
     <>

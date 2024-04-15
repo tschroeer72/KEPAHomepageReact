@@ -16,9 +16,9 @@ export default function Page() {
         pb: 6,
       }}
     >
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Typography
-          variant="h2"
+          variant="h3"
           align="center"
           color="text.primary"
           gutterBottom
@@ -26,12 +26,25 @@ export default function Page() {
           Aktuelles
         </Typography>
         <Typography
-          variant="h5"
+          variant="h6"
           align="center"
           color="text.secondary"
           paragraph
         >
-          aaaa
+          Bist Du zwischen 50 und 70 Jahre jung, männlich und hättest Lust zum
+          regelmäßigen Kegeln? Dann melde Dich bei uns. Wir suchen Verstärkung.
+        </Typography>
+        <Typography
+          variant="h6"
+          align="center"
+          color="text.secondary"
+          paragraph
+        >
+          Wir treffen uns alle 14 Tage mittwochs im Restaurant{" "}
+          <a href="https://www.soledoro.de/" target="_blank">
+            Sole D'Oro
+          </a>{" "}
+          in Buckow
         </Typography>
       </Container>
     </Box>
