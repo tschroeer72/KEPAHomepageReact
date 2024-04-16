@@ -33,11 +33,11 @@ const items = [
   { link: "/aktuelles", name: "Aktuelles", linktype: "int" },
   { link: "/termine", name: "Termine", linktype: "int" },
   { link: "/kontakt", name: "Kontakt", linktype: "int" },
-  {
+  /*{
     link: "https://kegelgruppe-kepa.de/kegelverwaltung",
     name: "Kegelverwaltung",
     linktype: "ext",
-  },
+  },*/
   // { link: "/about", name: "About" },
 ];
 

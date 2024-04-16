@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 export const metadata = {
-  title: "Aktuelles",
-  description: "Eine kurze Beschreibung der App.",
+  title: "Termine",
+  description: "Termine",
 };
 
 export default function Page() {

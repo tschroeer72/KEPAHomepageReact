@@ -1,10 +1,11 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Link from "next/link";
 
 export const metadata = {
   title: "Aktuelles",
-  description: "Eine kurze Beschreibung der App.",
+  description: "Aktuelles",
 };
 
 export default function Page() {
@@ -40,11 +41,9 @@ export default function Page() {
           color="text.secondary"
           paragraph
         >
-          Wir treffen uns alle 14 Tage mittwochs im Restaurant{" "}
-          <a href="https://www.soledoro.de/" target="_blank">
-            Sole D'Oro
-          </a>{" "}
-          in Buckow
+          Wir treffen uns alle 14 Tage mittwochs in Buckow. Für Einzelheiten
+          schreibe uns eine Nachricht über unser{" "}
+          <Link href="\kontakt">Kontaktformular</Link>
         </Typography>
       </Container>
     </Box>
