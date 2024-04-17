@@ -8,7 +8,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import PushPinIcon from "@mui/icons-material/SportsBaseballTwoTone";
+//import PushPinIcon from "@mui/icons-material/SportsBaseballTwoTone";
+import 'dayjs/locale/de';
 
 function getRandomNumber(min: number, max: number) {
   return Math.round(Math.random() * (max - min) + min);
@@ -136,6 +137,7 @@ export default function Cal() {
   return (
     <LocalizationProvider
       dateAdapter={AdapterDayjs}
+      adapterLocale="de"
       localeText={{
         calendarWeekNumberHeaderText: "KW",
         calendarWeekNumberText: (weekNumber) => `${weekNumber}.`,
@@ -143,6 +145,7 @@ export default function Cal() {
     >
       <DateCalendar
         defaultValue={initialCurrentDate}
+        displayWeekNumber
         loading={isLoading}
         onMonthChange={handleMonthChange}
         renderLoading={() => <DayCalendarSkeleton />}
