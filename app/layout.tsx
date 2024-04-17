@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -17,6 +18,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+    React.useEffect(() => {
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='{https://matomo.thorsten-schroeer.de/}'; s.parentNode?.insertBefore(g,s);
+    }, [])
 
   return (
     <html lang="de">
