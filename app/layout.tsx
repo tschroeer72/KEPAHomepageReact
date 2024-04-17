@@ -1,5 +1,4 @@
 import * as React from "react";
-import Link from "next/link";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import DrawerAppBar from "@/components/AppBar";
@@ -7,13 +6,20 @@ import DrawerAppBar from "@/components/AppBar";
 import App from "@/components/AppContext";
 import Notification from "@/components/notifications/Notification";
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="de">
+
       <body>
         <App>
           <Notification />
