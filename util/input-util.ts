@@ -28,7 +28,7 @@ export default function setInputChange<T>(
   } else {
     // string
     setData((data) => {
-      console.log(target.name + " " + target.value);
+      //console.log(target.name + " " + target.value);
       return { ...data, [name]: target.value };
     });
   }

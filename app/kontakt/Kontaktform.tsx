@@ -7,7 +7,12 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 
 export default function Kontaktform() {
-  const [mailData, setMailData] = useState<IMailData>();
+  const [mailData, setMailData] = useState<IMailData>(
+      {
+    name: "",
+    tel: "",
+    message: ""
+  });
 
   const handleChange = (event: any) => {
     event.persist();
@@ -17,7 +22,7 @@ export default function Kontaktform() {
   };
 
   const GetMailBody = () => {
-    console.log("GetMailBody", mailData);
+    //console.log("GetMailBody", mailData);
     return `Name = ${mailData?.name} \n\r Telefon = ${mailData?.tel} \n\r Nachricht = ${mailData?.message}`;
   };
 
