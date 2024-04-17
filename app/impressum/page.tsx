@@ -35,7 +35,7 @@ export default function Page() {
           Angaben gemäß § 5 TMG
         </Typography>
         <Typography
-          variant="body"
+          variant="body1"
           align="center"
           color="text.secondary"
           paragraph
@@ -53,7 +53,7 @@ export default function Page() {
             Vertreten durch:
         </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -69,7 +69,7 @@ Thorsten Schröer
             Kontakt:
         </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -77,7 +77,7 @@ Thorsten Schröer
             Telefon: 030-57794574
         </Typography>
           <Typography
-              variant="body"
+              variant="body1"
               align="center"
               color="text.secondary"
               paragraph
@@ -100,7 +100,7 @@ Thorsten Schröer
               Haftung für Inhalte:
           </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -116,7 +116,7 @@ Thorsten Schröer
             Haftung für Links
         </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -132,7 +132,7 @@ Thorsten Schröer
             Urheberrecht
         </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -148,7 +148,7 @@ Thorsten Schröer
             Datenschutz
         </Typography>
         <Typography
-            variant="body"
+            variant="body1"
             align="center"
             color="text.secondary"
             paragraph
@@ -159,7 +159,7 @@ Thorsten Schröer
         </Typography>
 
           <Typography
-              variant="body"
+              variant="body1"
               align="center"
               color="text.secondary"
               paragraph
