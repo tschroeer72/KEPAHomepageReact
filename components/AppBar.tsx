@@ -38,6 +38,7 @@ const items = [
     name: "Kegelverwaltung",
     linktype: "ext",
   },*/
+    { link: "/impressum", name: "Impressum", linktype: "int" },
   // { link: "/about", name: "About" },
 ];
 
